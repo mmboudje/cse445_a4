@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!-- Defining the root element for NationalParks -->
+    <xs:element name="NationalParks">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Defining the NationalPark element within NationalParks -->
+                <xs:element name="NationalPark" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <!-- Defining the Name, Phone, and Address elements for each NationalPark -->
+                            <xs:element name="Name" type="xs:string"/>
+                            <xs:element name="Phone" type="xs:string" maxOccurs="unbounded"/>
+                            <xs:element name="Address">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <!-- Defining the Number, Street, City, State, and Zip elements for each Address -->
+                                        <xs:element name="Number" type="xs:decimal"/>
+                                        <xs:element name="Street" type="xs:string"/>
+                                        <xs:element name="City" type="xs:string"/>
+                                        <xs:element name="State" type="xs:string"/>
+                                        <xs:element name="Zip" type="xs:decimal"/>
+                                    </xs:sequence>
+                                    <!-- Defining the required NearestAirport attribute for each Address -->
+                                    <xs:attribute name="NearestAirport" type="xs:string" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <!-- Defining the optional Rating attribute for each NationalPark -->
+                        <xs:attribute name="Rating" type="xs:decimal" use="optional"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
