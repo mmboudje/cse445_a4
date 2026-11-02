@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<NationalParks>
+<NationalParks xmlns="https://mmboudje.github.io/cse445_a4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://mmboudje.github.io/cse445_a4 NationalParks.xsd">
     <!-- Information about Grand Canyon National Park -->
     <NationalPark Rating="4.9">
         <Name>Grand Canyon</Name>
